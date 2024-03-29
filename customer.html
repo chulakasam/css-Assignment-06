@@ -86,11 +86,93 @@
 <section id="s1">
     <button type="button" class="btn btn-danger">Delete</button>
     <button type="button" class="btn btn-warning">Update</button>
-    <button type="button" class="btn btn-success">ADD</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">ADD</button>
+
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">New Customer</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="Nic" class="form-label">NIC No</label>
+                            <input type="text" class="form-control" id="Nic" aria-describedby="emailHelp">
+
+                            <label for="Name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="Name" aria-describedby="emailHelp">
+
+                            <label for="Address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="Address" aria-describedby="emailHelp">
+
+                            <label for="Tel" class="form-label">Tel</label>
+                            <input type="tel" class="form-control" id="Tel" aria-describedby="emailHelp">
+
+                            <label for="Date" class="form-label">Registration Date</label>
+                            <input type="date" class="form-control" id="Date" aria-describedby="emailHelp">
+
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">All details are correct!!! </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+      </div>
+<!----------------------------------------------------------------------------------------->
 </section>
 <section id="s2">
-    <input type="text" class="form-control" id="nic" aria-describedby="emailHelp" placeholder="Enter the NIC No" >
-    <button type="button" class="btn btn-primary">Search</button>
+    <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter the NIC No" >
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Search</button>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel1">Customer Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="Nic1" class="form-label">NIC No</label>
+                            <input type="text" class="form-control" id="Nic1" aria-describedby="emailHelp">
+
+                            <label for="Name1" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="Name1" aria-describedby="emailHelp">
+
+                            <label for="Address1" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="Address1" aria-describedby="emailHelp">
+
+                            <label for="Tel1" class="form-label">Tel</label>
+                            <input type="tel" class="form-control" id="Tel1" aria-describedby="emailHelp">
+
+                            <label for="Date1" class="form-label">Registration Date</label>
+                            <input type="date" class="form-control" id="Date1" aria-describedby="emailHelp">
+
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                            <label class="form-check-label" for="exampleCheck1">All details are correct!!! </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 <section id="s3">
     <table class="table">
