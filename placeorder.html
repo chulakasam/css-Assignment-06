@@ -99,6 +99,18 @@
             right: 50px;
         }
 
+        #s4>#d4>button{
+            bottom: 30px;
+            right: 30px;
+            position: absolute;
+            margin: auto;
+            width: 140px;
+            height: 60px;
+            color: white;
+            font-weight: bolder;
+            font-size: 18px;
+            border-radius: 25px;
+        }
 
 
 
@@ -217,7 +229,46 @@
         </tbody>
     </table>
 </section>
+<section id="s4">
+      <div id="d4">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Confirm Order</button>
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel1">Payment Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form>
+                              <div class="mb-3">
+                                  <label for="Nic1" class="form-label">Order ID</label>
+                                  <input type="text" class="form-control" id="Nic1" aria-describedby="emailHelp">
 
+                                  <label for="Name1" class="form-label">Amount</label>
+                                  <input type="text" class="form-control" id="Name1" aria-describedby="emailHelp">
+
+                                  <label for="Address1" class="form-label">Sub Total</label>
+                                  <input type="text" class="form-control" id="Address1" aria-describedby="emailHelp">
+
+                                  <label for="Tel1" class="form-label">Balance</label>
+                                  <input type="tel" class="form-control" id="Tel1" aria-describedby="emailHelp">
+
+
+
+                              </div>
+
+
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Pay Now</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</section>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
