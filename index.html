@@ -334,7 +334,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-primary" id="save-item">Save</button>
                     </div>
                 </div>
             </div>
@@ -397,7 +397,7 @@
                 <th scope="col">Unit Price</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="item-details">
             <tr>
                 <th scope="row">I001</th>
                 <td>Sunlight</td>
@@ -406,41 +406,7 @@
                 <td>Rs.150.00</td>
 
             </tr>
-            <tr>
-                <th scope="row">I002</th>
-                <td>Gold marie</td>
-                <td>Biscuit</td>
-                <td>120</td>
-                <td>Rs.90.00</td>
-            </tr>
-            <tr>
-                <th scope="row">I003</th>
-                <td >Rightsberry</td>
-                <td>chocolate</td>
-                <td>180</td>
-                <td>Rs.100.00</td>
-            </tr>
-            <tr>
-                <th scope="row">I004</th>
-                <td >Red Raw Rice</td>
-                <td>Raw</td>
-                <td>500</td>
-                <td>Rs.230.00</td>
-            </tr>
-            <tr>
-                <th scope="row">I005</th>
-                <td > Indian Dhal</td>
-                <td>Dhal</td>
-                <td>300</td>
-                <td>Rs.200.00</td>
-            </tr>
-            <tr>
-                <th scope="row">I006</th>
-                <td>Breast chiken</td>
-                <td>chicken</td>
-                <td>50</td>
-                <td>Rs.1300.00</td>
-            </tr>
+
             </tbody>
         </table>
 
@@ -487,7 +453,7 @@
             }
         );
     })
-     //CRUD Section
+     //CRUD Section(customer)
     $('#save-cus').on('click',()=>{
         var id = $('#Nic').val();
         var name = $('#cusName').val();
@@ -507,7 +473,26 @@
         $('#cus-details').append(record);
     })
 
+    //CRUD Section(item)
 
+    $('#save-item').on('click',()=>{
+        var code = $('#ICode1').val();
+        var Iname = $('#ItemName1').val();
+        var desc= $('#description1').val();
+        var qty = $('#qty1').val();
+        var price = $('#price1').val();
+
+        console.log(code+Iname+desc+qty+price);
+
+        var record=` <tr>
+          <td class="cus-id">${code}</td>
+          <td class="cus-name">${Iname}</td>
+          <td class="cus-address">${desc}</td>
+          <td class="cus-tel">${qty}</td>
+          <td class="cus-reg">${price}</td>
+      </tr>`
+        $('#item-details').append(record);
+    })
 
 </script>
 
