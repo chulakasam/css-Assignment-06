@@ -416,7 +416,7 @@
 <script src="Assests/lib/jquery-3.7.1.min.js"></script>
 <script>
     var Customer=[];
-    var items=[];
+    var Items=[];
 
 
 
@@ -503,15 +503,29 @@
 
         console.log(code+Iname+desc+qty+price);
 
-        var record=` <tr>
-          <td class="cus-id">${code}</td>
-          <td class="cus-name">${Iname}</td>
-          <td class="cus-address">${desc}</td>
-          <td class="cus-tel">${qty}</td>
-          <td class="cus-reg">${price}</td>
-      </tr>`
-        $('#item-details').append(record);
+        let items={
+            item_code:code,
+            item_name:Iname,
+            item_desc:desc,
+            item_qty:qty,
+            item_price:price,
+        }
+        Items.push(items);
+        loadItemTable();
     })
+    function loadItemTable(){
+        $('#item-details').empty();
+        Items.map((item,index) => {
+            var record=` <tr>
+             <td class="I-code">${item.item_code}</td>
+            <td class="I-name">${item.item_name}</td>
+            <td class="I-desc">${item.item_desc}</td>
+            <td class="I-qty">${item.item_qty}</td>
+            <td class="I-price">${item.item_price}</td>
+         </tr>`
+            $('#item-details').append(record);
+        });
+    }
 
 </script>
 
