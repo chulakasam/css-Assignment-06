@@ -76,6 +76,13 @@
             margin: auto;
             border-radius: 15px;
         }
+        #cus-load-form {
+            height: 532px;
+            width: 448px;
+            top: 300px;
+            position: absolute;
+            left: 50px;
+        }
 
     /*-------item section style----------*/
         #s4{
@@ -141,8 +148,6 @@
             margin: auto;
             border-radius: 15px;
         }
-
-
     </style>
 </head>
 <body>
@@ -291,6 +296,42 @@
 
 
     </section>
+    <section id="cus-load-form">
+        <form class="row g-3">
+
+            <div class="col-md-6">
+                <label for="SID" class="form-label">ID</label>
+                <input type="text" class="form-control" id="SID">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="CID" class="form-label">Customer ID</label>
+                <input type="text" class="form-control" id="CID">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="Cname" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="Cname">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="Caddress" class="form-label">Customer Address</label>
+                <input type="text" class="form-control" id="Caddress">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="Ctel" class="form-label">Telephone No</label>
+                <input type="text" class="form-control" id="Ctel">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="Reg-date" class="form-label">Registration Date</label>
+                <input type="text" class="form-control" id="Reg-date">
+            </div>
+
+        </form>
+
+    </section>
 </section>
 
 <!--item section-->
@@ -420,7 +461,7 @@
 
 
 
-    $('#s1,#s2,#s3').css(
+    $('#s1,#s2,#s3,#cus-load-form').css(
         {
             display:'none'
         }
@@ -431,7 +472,7 @@
         }
     );
     $('#customer-manage').on('click', ()=>{
-        $('#s1,#s2,#s3').css(
+        $('#s1,#s2,#s3,#cus-load-form').css(
             {
                 display:'block'
             }
@@ -451,13 +492,14 @@
                 display:'block'
             }
         );
-        $('#s1,#s2,#s3').css(
+        $('#s1,#s2,#s3,#cus-load-form').css(
             {
                 display:'none'
             }
         );
     })
-     //CRUD Section(customer)
+
+     //CRUD Section(customer)------------------------------------------------------------
     $('#save-cus').on('click',()=>{
         var id = $('#Nic').val();
         var name = $('#cusName').val();
@@ -492,8 +534,7 @@
         });
     }
 
-    //CRUD Section(item)
-
+    //CRUD Section(item)-----------------------------------------------------------------
     $('#save-item').on('click',()=>{
         var code = $('#ICode1').val();
         var Iname = $('#ItemName1').val();
