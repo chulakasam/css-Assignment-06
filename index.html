@@ -415,6 +415,11 @@
 </section>
 <script src="Assests/lib/jquery-3.7.1.min.js"></script>
 <script>
+    var Customer=[];
+    var items=[];
+
+
+
     $('#s1,#s2,#s3').css(
         {
             display:'none'
@@ -425,7 +430,6 @@
             display:'none'
         }
     );
-
     $('#customer-manage').on('click', ()=>{
         $('#s1,#s2,#s3').css(
             {
@@ -463,15 +467,30 @@
 
         console.log(id+name+address+tel+date);
 
-        var record=` <tr>
-          <td class="cus-id">${id}</td>
-          <td class="cus-name">${name}</td>
-          <td class="cus-address">${address}</td>
-          <td class="cus-tel">${tel}</td>
-          <td class="cus-reg">${date}</td>
-      </tr>`
-        $('#cus-details').append(record);
+        let cus={
+            cus_id:id,
+            cus_name:name,
+            cus_address:address,
+            cus_tel:tel,
+            cus_date:date,
+        }
+        Customer.push(cus);
+        loadCustomerTable();
+
     })
+    function loadCustomerTable(){
+        $('#cus-details').empty();
+        Customer.map((item,index) => {
+            var record=` <tr>
+             <td class="stu-id">${item.cus_id}</td>
+            <td class="stu-fname">${item.cus_name}</td>
+            <td class="stu-lname">${item.cus_address}</td>
+            <td class="stu-address">${item.cus_tel}</td>
+            <td class="stu-programme">${item.cus_date}</td>
+         </tr>`
+            $('#cus-details').append(record);
+        });
+    }
 
     //CRUD Section(item)
 
