@@ -341,7 +341,7 @@
     <section id="s4">
         <h1>Items</h1>
         <button type="button" class="btn btn-danger" id="Item-Delete">Delete</button>
-        <button type="button" class="btn btn-warning">Update</button>
+        <button type="button" class="btn btn-warning"id="Item-update">Update</button>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">ADD</button>
         <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
             <div class="modal-dialog">
@@ -669,6 +669,26 @@
     $("#Item-Delete").on('click', () => {
         Items.splice(recordIndex, 1);
         loadItemTable();
+    });
+    $('#Item-update').on('click' , ()=> {
+
+        let val1 = $('#Item-code').val();
+        let val2 = $('#Item-name').val();
+        let val3 = $('#Item-desc').val();
+        let val4 = $('#Item-qty').val();
+        let val5 = $('#Item-unitprice').val();
+
+        let itemObj=Items[recordIndex];
+        itemObj.item_code=val1;
+        itemObj.item_name=val2;
+        itemObj.item_desc=val3;
+        itemObj.item_qty=val4;
+        itemObj.item_price=val5;
+        console.log("S1: ", itemObj);
+        console.log("S2: ", Items[recordIndex]);
+
+        loadItemTable();
+
     });
 </script>
 
