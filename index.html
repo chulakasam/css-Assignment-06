@@ -180,9 +180,9 @@
 <section id="customer manage">
     <section id="s1">
     <h1>customer</h1>
-    <button type="button" class="btn btn-danger" >Delete</button>
-    <button type="button" class="btn btn-warning">Update</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">ADD</button>
+    <button type="button" class="btn btn-danger"id="cus-Delete" >Delete</button>
+    <button type="button" class="btn btn-warning" id="cus-update">Update</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" id="cus-Add">ADD</button>
 
     <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -453,7 +453,7 @@
 <script>
     var Customer=[];
     var Items=[];
-
+     var recordIndex;
 
 
     $('#s1,#s2,#s3,#cus-load-form').css(
@@ -531,6 +531,7 @@
 
     $('#cus-details').on('click','tr',function (){
         let index = $(this).index();
+        recordIndex=index;
         var id = $(this).find(".cus-id").text();
         var name = $(this).find(".cus-name").text();
         var address = $(this).find(".cus-address").text();
@@ -545,6 +546,34 @@
         $('#Reg-date').val(date);
 
     });
+
+    $("#cus-Delete").on('click', () => {
+        Customer.splice(recordIndex, 1);
+        loadCustomerTable();
+
+    });
+
+    $('#cus-update').on('click' , ()=> {
+
+        let val1 = $('#CID').val();
+        let val2 = $('#Cname').val();
+        let val3 = $('#Caddress').val();
+        let val4 = $('#Ctel').val();
+        let val5 = $('#Reg-date').val();
+
+        let customerObj=Customer[recordIndex];
+        customerObj.cus_id=val1;
+        customerObj.cus_name=val2;
+        customerObj.cus_address=val3;
+        customerObj.cus_tel=val4;
+        customerObj.cus_date=val5;
+        console.log("S1: ", customerObj);
+        console.log("S2: ", Customer[recordIndex]);
+
+        loadCustomerTable();
+
+    });
+
     //CRUD Section(item)-----------------------------------------------------------------
     $('#save-item').on('click',()=>{
         var code = $('#ICode1').val();
