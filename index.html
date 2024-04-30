@@ -300,11 +300,6 @@
         <form class="row g-3">
 
             <div class="col-md-6">
-                <label for="SID" class="form-label">ID</label>
-                <input type="text" class="form-control" id="SID">
-            </div>
-            <br>
-            <div class="col-md-6">
                 <label for="CID" class="form-label">Customer ID</label>
                 <input type="text" class="form-control" id="CID">
             </div>
@@ -326,7 +321,7 @@
             <br>
             <div class="col-md-6">
                 <label for="Reg-date" class="form-label">Registration Date</label>
-                <input type="text" class="form-control" id="Reg-date">
+                <input type="date" class="form-control" id="Reg-date">
             </div>
 
         </form>
@@ -524,16 +519,32 @@
         $('#cus-details').empty();
         Customer.map((item,index) => {
             var record=` <tr>
-             <td class="stu-id">${item.cus_id}</td>
-            <td class="stu-fname">${item.cus_name}</td>
-            <td class="stu-lname">${item.cus_address}</td>
-            <td class="stu-address">${item.cus_tel}</td>
-            <td class="stu-programme">${item.cus_date}</td>
+             <td class="cus-id">${item.cus_id}</td>
+            <td class="cus-name">${item.cus_name}</td>
+            <td class="cus-address">${item.cus_address}</td>
+            <td class="cus-tel">${item.cus_tel}</td>
+            <td class="cus-date">${item.cus_date}</td>
          </tr>`
             $('#cus-details').append(record);
         });
     }
 
+    $('#cus-details').on('click','tr',function (){
+        let index = $(this).index();
+        var id = $(this).find(".cus-id").text();
+        var name = $(this).find(".cus-name").text();
+        var address = $(this).find(".cus-address").text();
+        var tel = $(this).find(".cus-tel").text();
+        var date = $(this).find(".cus-date").text();
+
+        console.log(id+ " "+name+" "+address+" "+tel+" " +date);
+        $('#CID').val(id);
+        $('#Cname').val(name);
+        $('#Caddress').val(address);
+        $('#Ctel').val(tel);
+        $('#Reg-date').val(date);
+
+    });
     //CRUD Section(item)-----------------------------------------------------------------
     $('#save-item').on('click',()=>{
         var code = $('#ICode1').val();
