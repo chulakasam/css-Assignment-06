@@ -148,6 +148,13 @@
             margin: auto;
             border-radius: 15px;
         }
+        #Item-load-form {
+            height: 532px;
+            width: 448px;
+            top: 300px;
+            position: absolute;
+            left: 50px;
+        }
     </style>
 </head>
 <body>
@@ -333,7 +340,7 @@
 <section id="item manage">
     <section id="s4">
         <h1>Items</h1>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-danger" id="Item-Delete">Delete</button>
         <button type="button" class="btn btn-warning">Update</button>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">ADD</button>
         <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
@@ -448,6 +455,39 @@
 
 
     </section>
+    <section id="Item-load-form">
+        <form class="row g-3">
+
+            <div class="col-md-6">
+                <label for="Item-code" class="form-label">Item Code</label>
+                <input type="text" class="form-control" id="Item-code">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="Item-name" class="form-label">Item Name</label>
+                <input type="text" class="form-control" id="Item-name">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="Item-desc" class="form-label">Description</label>
+                <input type="text" class="form-control" id="Item-desc">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="Item-qty" class="form-label">Qty on Hand</label>
+                <input type="text" class="form-control" id="Item-qty">
+            </div>
+            <br>
+            <div class="col-md-6">
+                <label for="Item-unitprice" class="form-label">Unit Price</label>
+                <input type="text" class="form-control" id="Item-unitprice">
+            </div>
+
+        </form>
+
+    </section>
+</section>
+
 </section>
 <script src="Assests/lib/jquery-3.7.1.min.js"></script>
 <script>
@@ -461,7 +501,7 @@
             display:'none'
         }
     );
-    $('#s4,#s5,#s6').css(
+    $('#s4,#s5,#s6,#Item-load-form').css(
         {
             display:'none'
         }
@@ -473,7 +513,7 @@
             }
         );
 
-        $('#s4,#s5,#s6').css(
+        $('#s4,#s5,#s6,#Item-load-form').css(
             {
                 display:'none'
             }
@@ -482,7 +522,7 @@
 
     })
     $('#item-manage').on('click', ()=>{
-        $('#s4,#s5,#s6').css(
+        $('#s4,#s5,#s6,#Item-load-form').css(
             {
                 display:'block'
             }
@@ -608,6 +648,28 @@
         });
     }
 
+    $('#item-details').on('click','tr',function (){
+        let index = $(this).index();
+        recordIndex=index;
+        var code = $(this).find(".I-code").text();
+        var name = $(this).find(".I-name").text();
+        var desc = $(this).find(".I-desc").text();
+        var qty = $(this).find(".I-qty").text();
+        var price = $(this).find(".I-price").text();
+
+        console.log(code+ " "+name+" "+desc+" "+qty+" " +price);
+        $('#Item-code').val(code);
+        $('#Item-name').val(name);
+        $('#Item-desc').val(desc);
+        $('#Item-qty').val(qty);
+        $('#Item-unitprice').val(price);
+        loadItemTable();
+    });
+
+    $("#Item-Delete").on('click', () => {
+        Items.splice(recordIndex, 1);
+        loadItemTable();
+    });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
