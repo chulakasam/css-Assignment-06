@@ -83,8 +83,7 @@
             position: absolute;
             left: 50px;
         }
-
-    /*-------item section style----------*/
+        /*-------item section style----------*/
         #s4{
             top: 120px;
             height: 200px;
@@ -155,6 +154,150 @@
             position: absolute;
             left: 50px;
         }
+        /*-----place order--------------------*/
+        #b1{
+            height: 60px;
+            width: 150px;
+            font-size: 30px;
+            font-weight: bolder;
+            top: 15px;
+            right: 15px;
+            position: absolute;
+            margin: auto;
+            border-radius: 15px;
+        }
+        #s7{
+            width: 500px;
+            height: 400px;
+            top: 200px;
+            left:100px;
+            position: absolute;
+            margin: auto;
+        }
+        #s7>#d2>#i1{
+            height: 20px;
+            width: 250px;
+            top:0;
+            left: 180px;
+            position: absolute;
+            margin: auto;
+            font-size: 15px;
+            font-weight:bold;
+        }
+        #s8{
+            width: 500px;
+            height: 400px;
+            top: 300px;
+            left:100px;
+            position: absolute;
+            margin: auto;
+        }
+        #s8>#d3>#i2{
+            height: 20px;
+            width: 150px;
+            top:0;
+            left: 180px;
+            position: absolute;
+            margin: auto;
+            font-size: 15px;
+            font-weight:bold;
+        }
+        #s8>#d3>#i3{
+            height: 20px;
+            width: 200px;
+            top:0;
+            left: 350px;
+            position: absolute;
+            margin: auto;
+            font-size: 15px;
+            font-weight:bold;
+        }
+        #s8>#d3>#i4{
+            height: 20px;
+            width: 200px;
+            top:0;
+            left: 570px;
+            position: absolute;
+            margin: auto;
+            font-size: 15px;
+            font-weight:bold;
+        }
+        #s8>#d3>#i5{
+            height: 20px;
+            width: 150px;
+            top:60px;
+            left: 180px;
+            position: absolute;
+            margin: auto;
+            font-size: 15px;
+            font-weight:bold;
+        }
+        #s9{
+            height: 400px;
+            bottom: 100px;
+            position: absolute;
+            margin: auto;
+            left: 50px;
+            right: 50px;
+        }
+        #s10>#d4>button{
+            bottom: 30px;
+            right: 30px;
+            position: absolute;
+            margin: auto;
+            width: 140px;
+            height: 60px;
+            color: white;
+            font-weight: bolder;
+            font-size: 18px;
+            border-radius: 25px;
+        }
+    /*dashboard section*/
+        #d5{
+            width: 900px;
+            height:800px;
+            background-image: url("Assests/images/pngegg.png");
+
+            background-position: center;
+            background-size: cover;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            right: 100px;
+            margin:auto;
+        }
+        #h1{
+            font-weight: bolder;
+            top:70px;
+            position: absolute;
+            margin: auto;
+        }
+        #s11{
+            width: 500px;
+            height:650px;
+
+            top: 170px;
+            bottom: 0;
+            position: absolute;
+            left: 0;
+            margin:auto;
+
+        }
+        #s11>#d1>button{
+            height: 150px;
+            width: 400px;
+            font-weight: bolder;
+            font-size: 30px;
+            background-color: #1122BE;
+            margin: auto;
+            position: inherit;
+            border-radius: 15px;
+        }
+        #s11>#d1>button>img{
+            height: 60px;
+            width: 60px;
+        }
+
     </style>
 </head>
 <body>
@@ -165,7 +308,7 @@
 
             <ul class="nav nav-underline">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <span class="nav-link"  id="home-manage">Home</span>
                 </li>
                 <li class="nav-item">
                     <span class="nav-link"  id="customer-manage">Customer Mgt</span>
@@ -174,7 +317,7 @@
                     <span class="nav-link"  id="item-manage">Item Mgt</span>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Place order</a>
+                    <span class="nav-link"  id="placeOrder-manage">Place order</span>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Log Out</a>
@@ -488,24 +631,237 @@
     </section>
 </section>
 
+<!--place order section-->
+<section id="place-order-manage">
+    <section id="s7">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Customer ID</button>
+            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">1990567898</a></li>
+                <li><a class="dropdown-item" href="#">19989878654</a></li>
+                <li><a class="dropdown-item" href="#">19989878654</a></li>
+                <li><a class="dropdown-item" href="#">19989878654</a></li>
+                <li><a class="dropdown-item" href="#">19989878654</a></li>
+                <li><a class="dropdown-item" href="#">19989878654</a></li>
+            </ul>
+        </div>
+
+        <div id="d2">
+            <input class="form-control form-control-lg" type="text" placeholder="customer Name" aria-label=".form-control-lg example" id="i1">
+        </div>
+
+    </section>
+    <section id="s8">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Item Code </button>
+            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">I001</a></li>
+                <li><a class="dropdown-item" href="#">I002</a></li>
+                <li><a class="dropdown-item" href="#">I003</a></li>
+                <li><a class="dropdown-item" href="#">I004</a></li>
+                <li><a class="dropdown-item" href="#">I005</a></li>
+                <li><a class="dropdown-item" href="#">I006</a></li>
+            </ul>
+        </div>
+        <div id="d3">
+            <input class="form-control form-control-lg" type="text" placeholder="Item name" aria-label=".form-control-lg example" id="i2">
+            <input class="form-control form-control-lg" type="text" placeholder="Availability" aria-label=".form-control-lg example" id="i3">
+            <input class="form-control form-control-lg" type="text" placeholder="Unit Price" aria-label=".form-control-lg example" id="i4">
+            <input class="form-control form-control-lg" type="text" placeholder="Qty" aria-label=".form-control-lg example" id="i5">
+        </div>
+    </section>
+    <section id="s9">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Order ID</th>
+                <th scope="col">Customer ID</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Amount</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">O001</th>
+                <td>19989878654</td>
+                <td>I002</td>
+                <td>Rs,90.00</td>
+                <td>4</td>
+                <td>Rs.360.00</td>
+
+            </tr>
+            <tr>
+                <th scope="row">O002</th>
+                <td>19989878654</td>
+                <td>I002</td>
+                <td>Rs,90.00</td>
+                <td>4</td>
+                <td>Rs.360.00</td>
+            </tr>
+            <tr>
+                <th scope="row">O003</th>
+                <td>19989878654</td>
+                <td>I002</td>
+                <td>Rs,90.00</td>
+                <td>4</td>
+                <td>Rs.360.00</td>
+            </tr>
+            <tr>
+                <th scope="row">O004</th>
+                <td>19989878654</td>
+                <td>I002</td>
+                <td>Rs,90.00</td>
+                <td>4</td>
+                <td>Rs.360.00</td>
+            </tr>
+            <tr>
+                <th scope="row">O005</th>
+                <td>19989878654</td>
+                <td>I002</td>
+                <td>Rs,90.00</td>
+                <td>4</td>
+                <td>Rs.360.00</td>
+            </tr>
+            <tr>
+                <th scope="row">O006</th>
+                <td>19989878654</td>
+                <td>I002</td>
+                <td>Rs,90.00</td>
+                <td>4</td>
+                <td>Rs.360.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="s10">
+        <div id="d4">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop02">Confirm Order</button>
+            <div class="modal fade" id="staticBackdrop02" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel02" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel02">Payment Details</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="Nic1" class="form-label">Order ID</label>
+                                    <input type="text" class="form-control" id="Nic01" aria-describedby="emailHelp">
+
+                                    <label for="Name1" class="form-label">Amount</label>
+                                    <input type="text" class="form-control" id="Name01" aria-describedby="emailHelp">
+
+                                    <label for="Address1" class="form-label">Sub Total</label>
+                                    <input type="text" class="form-control" id="Address01" aria-describedby="emailHelp">
+
+                                    <label for="Tel1" class="form-label">Balance</label>
+                                    <input type="tel" class="form-control" id="Tel01" aria-describedby="emailHelp">
+
+
+
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="modal-footer" id="btn">
+                            <button type="button" class="btn btn-primary" id="confirm-order">Pay Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>
+
+<!--dashboard section-->
+<section id="home-section">
+    <h1 class="display-2" id="h1">DashBoard</h1>
+    <section id="s11">
+        <div id="d1">
+            <button type="button" class="btn btn-primary" id="b1" onclick="window.location='customer.html'">Customer
+                <img src="Assests/images/clienr%20n.png">
+            </button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" id="b2" onclick="window.location='item.html'">Item
+                <img src="Assests/images/item.png">
+            </button>
+            <br>
+            <br>
+            <button type="button" class="btn btn-primary" id="b3" onclick="window.location='placeorder.html'">Place Order
+                <img src="Assests/images/place_order.png"></button>
+        </div>
+    </section>
+
+    <div id="d5">
+    </div>
+
+</section>
+
 <script src="Assests/lib/jquery-3.7.1.min.js"></script>
 <script>
     var Customer=[];
     var Items=[];
      var recordIndex;
 
+    $('#s11,#d5,#h1').css({
+        display:'block'
+    });
+
+    $('#home-manage').on('click', ()=>{
+
+        $('#s11,#d5,#h1').css({
+            display:'block'
+        });
+
+        $('#s1,#s2,#s3,#cus-load-form').css(
+            {
+                display:'none'
+            }
+        );
+
+        $('#s4,#s5,#s6,#Item-load-form').css(
+            {
+                display:'none'
+            }
+        );
+
+        $('#s7,#s8,#s9,#s10').css(
+            {
+                display:'none'
+            }
+        );
+
+    })
 
     $('#s1,#s2,#s3,#cus-load-form').css(
         {
             display:'none'
         }
     );
+
     $('#s4,#s5,#s6,#Item-load-form').css(
         {
             display:'none'
         }
     );
+    $('#s7,#s8,#s9,#s10').css(
+        {
+            display:'none'
+        }
+    );
+
+
     $('#customer-manage').on('click', ()=>{
         $('#s1,#s2,#s3,#cus-load-form').css(
             {
@@ -519,6 +875,14 @@
             }
         );
 
+        $('#s7,#s8,#s9,#s10').css(
+            {
+                display:'none'
+            }
+        );
+        $('#s11,#d5,#h1').css({
+            display:'none'
+        });
 
     })
     $('#item-manage').on('click', ()=>{
@@ -532,8 +896,37 @@
                 display:'none'
             }
         );
-    })
 
+        $('#s7,#s8,#s9,#s10').css(
+            {
+                display:'none'
+            }
+        );
+        $('#s11,#d5,#h1').css({
+            display:'none'
+        });
+    })
+    $('#placeOrder-manage').on('click', ()=>{
+        $('#s7,#s8,#s9,#s10').css(
+            {
+                display:'block'
+            }
+        );
+        $('#s1,#s2,#s3,#cus-load-form').css(
+            {
+                display:'none'
+            }
+        );
+
+        $('#s4,#s5,#s6,#Item-load-form').css(
+            {
+                display:'none'
+            }
+        );
+        $('#s11,#d5,#h1').css({
+            display:'none'
+        });
+    })
      //CRUD Section(customer)------------------------------------------------------------
     $('#save-cus').on('click',()=>{
         var id = $('#Nic').val();
