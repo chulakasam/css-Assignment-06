@@ -5,298 +5,299 @@
     <title>Title</title>
     <link rel="stylesheet" href="Assests/normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assests/Style/pos.css">
     <style>
-        body{
-            background-color: lightskyblue;
+        /*body{*/
+        /*    background-color: lightskyblue;*/
 
-        }
-        #h1{
-            font-weight: bolder;
-        }
-        #s1{
-            top: 120px;
-            height: 200px;
-            width: 500px;
-            position: absolute;
-            margin: auto;
-        }
-        #s3{
-            height: 700px;
-            width: 1200px;
-            top: 400px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: absolute;
-            margin: auto;
-        }
-        #s1>button{
+        /*}*/
+        /*#h1{*/
+        /*    font-weight: bolder;*/
+        /*}*/
+        /*#s1{*/
+        /*    top: 120px;*/
+        /*    height: 200px;*/
+        /*    width: 500px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s3{*/
+        /*    height: 700px;*/
+        /*    width: 1200px;*/
+        /*    top: 400px;*/
+        /*    bottom: 0;*/
+        /*    left: 0;*/
+        /*    right: 0;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s1>button{*/
 
-            height: 60px;
-            width: 150px;
-            font-size: 30px;
-            font-weight: bolder;
-            border-radius: 15px;
-        }
-        #s2{
-            top: 120px;
-            height: 200px;
-            width: 800px;
-            right: 10px;
-            position: absolute;
-            margin: auto;
-        }
-        #s2>button{
-            height: 60px;
-            width: 150px;
-            right: 20px;
-            position: absolute;
-            margin: auto;
-            font-size: 30px;
-            font-weight: bolder;
-            border-radius: 15px;
-        }
-        #s2>input{
-            width: 300px;
-            right: 200px;
-            height: 60px;
-            position: absolute;
-            margin: auto;
-            font-weight: bold;
-            border-radius: 15px;
-        }
-        #b1{
-            height: 60px;
-            width: 150px;
-            font-size: 30px;
-            font-weight: bolder;
-            top: 15px;
-            right: 15px;
-            position: absolute;
-            margin: auto;
-            border-radius: 15px;
-        }
-        #cus-load-form {
-            height: 532px;
-            width: 448px;
-            top: 300px;
-            position: absolute;
-            left: 50px;
-        }
-        /*-------item section style----------*/
-        #s4{
-            top: 120px;
-            height: 200px;
-            width: 500px;
-            position: absolute;
-            margin: auto;
-        }
-        #s6{
-            height: 700px;
-            width: 1200px;
-            top: 400px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            position: absolute;
-            margin: auto;
-        }
-        #s4>button{
+        /*    height: 60px;*/
+        /*    width: 150px;*/
+        /*    font-size: 30px;*/
+        /*    font-weight: bolder;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#s2{*/
+        /*    top: 120px;*/
+        /*    height: 200px;*/
+        /*    width: 800px;*/
+        /*    right: 10px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s2>button{*/
+        /*    height: 60px;*/
+        /*    width: 150px;*/
+        /*    right: 20px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-size: 30px;*/
+        /*    font-weight: bolder;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#s2>input{*/
+        /*    width: 300px;*/
+        /*    right: 200px;*/
+        /*    height: 60px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-weight: bold;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#b1{*/
+        /*    height: 60px;*/
+        /*    width: 150px;*/
+        /*    font-size: 30px;*/
+        /*    font-weight: bolder;*/
+        /*    top: 15px;*/
+        /*    right: 15px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#cus-load-form {*/
+        /*    height: 532px;*/
+        /*    width: 448px;*/
+        /*    top: 300px;*/
+        /*    position: absolute;*/
+        /*    left: 50px;*/
+        /*}*/
+        /*!*-------item section style----------*!*/
+        /*#s4{*/
+        /*    top: 120px;*/
+        /*    height: 200px;*/
+        /*    width: 500px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s6{*/
+        /*    height: 700px;*/
+        /*    width: 1200px;*/
+        /*    top: 400px;*/
+        /*    bottom: 0;*/
+        /*    left: 0;*/
+        /*    right: 0;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s4>button{*/
 
-            height: 60px;
-            width: 150px;
-            font-size: 30px;
-            font-weight: bolder;
-            border-radius: 15px;
-        }
-        #s5{
-            top: 120px;
-            height: 200px;
-            width: 800px;
-            right: 10px;
-            position: absolute;
-            margin: auto;
-        }
-        #s5>button{
-            height: 60px;
-            width: 150px;
-            right: 20px;
-            position: absolute;
-            margin: auto;
-            font-size: 30px;
-            font-weight: bolder;
-            border-radius: 15px;
-        }
-        #s5>input{
-            width: 300px;
-            right: 200px;
-            height: 60px;
-            position: absolute;
-            margin: auto;
-            font-weight: bold;
-            border-radius: 15px;
-        }
-        #b1{
-            height: 60px;
-            width: 150px;
-            font-size: 30px;
-            font-weight: bolder;
-            top: 15px;
-            right: 15px;
-            position: absolute;
-            margin: auto;
-            border-radius: 15px;
-        }
-        #Item-load-form {
-            height: 532px;
-            width: 448px;
-            top: 300px;
-            position: absolute;
-            left: 50px;
-        }
-        /*-----place order--------------------*/
-        #b1{
-            height: 60px;
-            width: 150px;
-            font-size: 30px;
-            font-weight: bolder;
-            top: 15px;
-            right: 15px;
-            position: absolute;
-            margin: auto;
-            border-radius: 15px;
-        }
-        #s7{
-            width: 500px;
-            height: 400px;
-            top: 200px;
-            left:100px;
-            position: absolute;
-            margin: auto;
-        }
-        #s7>#d2>#i1{
-            height: 20px;
-            width: 250px;
-            top:0;
-            left: 180px;
-            position: absolute;
-            margin: auto;
-            font-size: 15px;
-            font-weight:bold;
-        }
-        #s8{
-            width: 500px;
-            height: 400px;
-            top: 300px;
-            left:100px;
-            position: absolute;
-            margin: auto;
-        }
-        #s8>#d3>#i2{
-            height: 20px;
-            width: 150px;
-            top:0;
-            left: 180px;
-            position: absolute;
-            margin: auto;
-            font-size: 15px;
-            font-weight:bold;
-        }
-        #s8>#d3>#i3{
-            height: 20px;
-            width: 200px;
-            top:0;
-            left: 350px;
-            position: absolute;
-            margin: auto;
-            font-size: 15px;
-            font-weight:bold;
-        }
-        #s8>#d3>#i4{
-            height: 20px;
-            width: 200px;
-            top:0;
-            left: 570px;
-            position: absolute;
-            margin: auto;
-            font-size: 15px;
-            font-weight:bold;
-        }
-        #s8>#d3>#i5{
-            height: 20px;
-            width: 150px;
-            top:60px;
-            left: 180px;
-            position: absolute;
-            margin: auto;
-            font-size: 15px;
-            font-weight:bold;
-        }
-        #s9{
-            height: 400px;
-            bottom: 100px;
-            position: absolute;
-            margin: auto;
-            left: 50px;
-            right: 50px;
-        }
-        #s10>#d4>button{
-            bottom: 30px;
-            right: 30px;
-            position: absolute;
-            margin: auto;
-            width: 140px;
-            height: 60px;
-            color: white;
-            font-weight: bolder;
-            font-size: 18px;
-            border-radius: 25px;
-        }
-    /*dashboard section*/
-        #d5{
-            width: 900px;
-            height:800px;
-            background-image: url("Assests/images/pngegg.png");
+        /*    height: 60px;*/
+        /*    width: 150px;*/
+        /*    font-size: 30px;*/
+        /*    font-weight: bolder;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#s5{*/
+        /*    top: 120px;*/
+        /*    height: 200px;*/
+        /*    width: 800px;*/
+        /*    right: 10px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s5>button{*/
+        /*    height: 60px;*/
+        /*    width: 150px;*/
+        /*    right: 20px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-size: 30px;*/
+        /*    font-weight: bolder;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#s5>input{*/
+        /*    width: 300px;*/
+        /*    right: 200px;*/
+        /*    height: 60px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-weight: bold;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#b1{*/
+        /*    height: 60px;*/
+        /*    width: 150px;*/
+        /*    font-size: 30px;*/
+        /*    font-weight: bolder;*/
+        /*    top: 15px;*/
+        /*    right: 15px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#Item-load-form {*/
+        /*    height: 532px;*/
+        /*    width: 448px;*/
+        /*    top: 300px;*/
+        /*    position: absolute;*/
+        /*    left: 50px;*/
+        /*}*/
+        /*!*-----place order--------------------*!*/
+        /*#b1{*/
+        /*    height: 60px;*/
+        /*    width: 150px;*/
+        /*    font-size: 30px;*/
+        /*    font-weight: bolder;*/
+        /*    top: 15px;*/
+        /*    right: 15px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#s7{*/
+        /*    width: 500px;*/
+        /*    height: 400px;*/
+        /*    top: 200px;*/
+        /*    left:100px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s7>#d2>#i1{*/
+        /*    height: 20px;*/
+        /*    width: 250px;*/
+        /*    top:0;*/
+        /*    left: 180px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-size: 15px;*/
+        /*    font-weight:bold;*/
+        /*}*/
+        /*#s8{*/
+        /*    width: 500px;*/
+        /*    height: 400px;*/
+        /*    top: 300px;*/
+        /*    left:100px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s8>#d3>#i2{*/
+        /*    height: 20px;*/
+        /*    width: 150px;*/
+        /*    top:0;*/
+        /*    left: 180px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-size: 15px;*/
+        /*    font-weight:bold;*/
+        /*}*/
+        /*#s8>#d3>#i3{*/
+        /*    height: 20px;*/
+        /*    width: 200px;*/
+        /*    top:0;*/
+        /*    left: 350px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-size: 15px;*/
+        /*    font-weight:bold;*/
+        /*}*/
+        /*#s8>#d3>#i4{*/
+        /*    height: 20px;*/
+        /*    width: 200px;*/
+        /*    top:0;*/
+        /*    left: 570px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-size: 15px;*/
+        /*    font-weight:bold;*/
+        /*}*/
+        /*#s8>#d3>#i5{*/
+        /*    height: 20px;*/
+        /*    width: 150px;*/
+        /*    top:60px;*/
+        /*    left: 180px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    font-size: 15px;*/
+        /*    font-weight:bold;*/
+        /*}*/
+        /*#s9{*/
+        /*    height: 400px;*/
+        /*    bottom: 100px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    left: 50px;*/
+        /*    right: 50px;*/
+        /*}*/
+        /*#s10>#d4>button{*/
+        /*    bottom: 30px;*/
+        /*    right: 30px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*    width: 140px;*/
+        /*    height: 60px;*/
+        /*    color: white;*/
+        /*    font-weight: bolder;*/
+        /*    font-size: 18px;*/
+        /*    border-radius: 25px;*/
+        /*}*/
+        /*!*-----dashboard section--------------*!*/
+        /*#d5{*/
+        /*    width: 900px;*/
+        /*    height:800px;*/
+        /*    background-image: url("Assests/images/pngegg.png");*/
 
-            background-position: center;
-            background-size: cover;
-            top: 0;
-            bottom: 0;
-            position: absolute;
-            right: 100px;
-            margin:auto;
-        }
-        #h1{
-            font-weight: bolder;
-            top:70px;
-            position: absolute;
-            margin: auto;
-        }
-        #s11{
-            width: 500px;
-            height:650px;
+        /*    background-position: center;*/
+        /*    background-size: cover;*/
+        /*    top: 0;*/
+        /*    bottom: 0;*/
+        /*    position: absolute;*/
+        /*    right: 100px;*/
+        /*    margin:auto;*/
+        /*}*/
+        /*#h1{*/
+        /*    font-weight: bolder;*/
+        /*    top:70px;*/
+        /*    position: absolute;*/
+        /*    margin: auto;*/
+        /*}*/
+        /*#s11{*/
+        /*    width: 500px;*/
+        /*    height:650px;*/
 
-            top: 170px;
-            bottom: 0;
-            position: absolute;
-            left: 0;
-            margin:auto;
+        /*    top: 170px;*/
+        /*    bottom: 0;*/
+        /*    position: absolute;*/
+        /*    left: 0;*/
+        /*    margin:auto;*/
 
-        }
-        #s11>#d1>button{
-            height: 150px;
-            width: 400px;
-            font-weight: bolder;
-            font-size: 30px;
-            background-color: #1122BE;
-            margin: auto;
-            position: inherit;
-            border-radius: 15px;
-        }
-        #s11>#d1>button>img{
-            height: 60px;
-            width: 60px;
-        }
+        /*}*/
+        /*#s11>#d1>button{*/
+        /*    height: 150px;*/
+        /*    width: 400px;*/
+        /*    font-weight: bolder;*/
+        /*    font-size: 30px;*/
+        /*    background-color: #1122BE;*/
+        /*    margin: auto;*/
+        /*    position: inherit;*/
+        /*    border-radius: 15px;*/
+        /*}*/
+        /*#s11>#d1>button>img{*/
+        /*    height: 60px;*/
+        /*    width: 60px;*/
+        /*}*/
 
     </style>
 </head>
@@ -809,281 +810,9 @@
 </section>
 
 <script src="Assests/lib/jquery-3.7.1.min.js"></script>
-<script>
-    var Customer=[];
-    var Items=[];
-     var recordIndex;
+<script src="js/pos.js">
 
-    $('#s11,#d5,#h1').css({
-        display:'block'
-    });
-
-    $('#home-manage').on('click', ()=>{
-
-        $('#s11,#d5,#h1').css({
-            display:'block'
-        });
-
-        $('#s1,#s2,#s3,#cus-load-form').css(
-            {
-                display:'none'
-            }
-        );
-
-        $('#s4,#s5,#s6,#Item-load-form').css(
-            {
-                display:'none'
-            }
-        );
-
-        $('#s7,#s8,#s9,#s10').css(
-            {
-                display:'none'
-            }
-        );
-
-    })
-
-    $('#s1,#s2,#s3,#cus-load-form').css(
-        {
-            display:'none'
-        }
-    );
-
-    $('#s4,#s5,#s6,#Item-load-form').css(
-        {
-            display:'none'
-        }
-    );
-    $('#s7,#s8,#s9,#s10').css(
-        {
-            display:'none'
-        }
-    );
-
-
-    $('#customer-manage').on('click', ()=>{
-        $('#s1,#s2,#s3,#cus-load-form').css(
-            {
-                display:'block'
-            }
-        );
-
-        $('#s4,#s5,#s6,#Item-load-form').css(
-            {
-                display:'none'
-            }
-        );
-
-        $('#s7,#s8,#s9,#s10').css(
-            {
-                display:'none'
-            }
-        );
-        $('#s11,#d5,#h1').css({
-            display:'none'
-        });
-
-    })
-    $('#item-manage').on('click', ()=>{
-        $('#s4,#s5,#s6,#Item-load-form').css(
-            {
-                display:'block'
-            }
-        );
-        $('#s1,#s2,#s3,#cus-load-form').css(
-            {
-                display:'none'
-            }
-        );
-
-        $('#s7,#s8,#s9,#s10').css(
-            {
-                display:'none'
-            }
-        );
-        $('#s11,#d5,#h1').css({
-            display:'none'
-        });
-    })
-    $('#placeOrder-manage').on('click', ()=>{
-        $('#s7,#s8,#s9,#s10').css(
-            {
-                display:'block'
-            }
-        );
-        $('#s1,#s2,#s3,#cus-load-form').css(
-            {
-                display:'none'
-            }
-        );
-
-        $('#s4,#s5,#s6,#Item-load-form').css(
-            {
-                display:'none'
-            }
-        );
-        $('#s11,#d5,#h1').css({
-            display:'none'
-        });
-    })
-     //CRUD Section(customer)------------------------------------------------------------
-    $('#save-cus').on('click',()=>{
-        var id = $('#Nic').val();
-        var name = $('#cusName').val();
-        var address= $('#Address').val();
-        var tel = $('#Tel').val();
-        var date = $('#Date').val();
-
-        console.log(id+name+address+tel+date);
-
-        let cus={
-            cus_id:id,
-            cus_name:name,
-            cus_address:address,
-            cus_tel:tel,
-            cus_date:date,
-        }
-        Customer.push(cus);
-        loadCustomerTable();
-
-    })
-    function loadCustomerTable(){
-        $('#cus-details').empty();
-        Customer.map((item,index) => {
-            var record=` <tr>
-             <td class="cus-id">${item.cus_id}</td>
-            <td class="cus-name">${item.cus_name}</td>
-            <td class="cus-address">${item.cus_address}</td>
-            <td class="cus-tel">${item.cus_tel}</td>
-            <td class="cus-date">${item.cus_date}</td>
-         </tr>`
-            $('#cus-details').append(record);
-        });
-    }
-
-    $('#cus-details').on('click','tr',function (){
-        let index = $(this).index();
-        recordIndex=index;
-        var id = $(this).find(".cus-id").text();
-        var name = $(this).find(".cus-name").text();
-        var address = $(this).find(".cus-address").text();
-        var tel = $(this).find(".cus-tel").text();
-        var date = $(this).find(".cus-date").text();
-
-        console.log(id+ " "+name+" "+address+" "+tel+" " +date);
-        $('#CID').val(id);
-        $('#Cname').val(name);
-        $('#Caddress').val(address);
-        $('#Ctel').val(tel);
-        $('#Reg-date').val(date);
-
-    });
-
-    $("#cus-Delete").on('click', () => {
-        Customer.splice(recordIndex, 1);
-        loadCustomerTable();
-
-    });
-
-    $('#cus-update').on('click' , ()=> {
-
-        let val1 = $('#CID').val();
-        let val2 = $('#Cname').val();
-        let val3 = $('#Caddress').val();
-        let val4 = $('#Ctel').val();
-        let val5 = $('#Reg-date').val();
-
-        let customerObj=Customer[recordIndex];
-        customerObj.cus_id=val1;
-        customerObj.cus_name=val2;
-        customerObj.cus_address=val3;
-        customerObj.cus_tel=val4;
-        customerObj.cus_date=val5;
-        console.log("S1: ", customerObj);
-        console.log("S2: ", Customer[recordIndex]);
-
-        loadCustomerTable();
-
-    });
-
-    //CRUD Section(item)-----------------------------------------------------------------
-    $('#save-item').on('click',()=>{
-        var code = $('#ICode1').val();
-        var Iname = $('#ItemName1').val();
-        var desc= $('#description1').val();
-        var qty = $('#qty1').val();
-        var price = $('#price1').val();
-
-        console.log(code+Iname+desc+qty+price);
-
-        let items={
-            item_code:code,
-            item_name:Iname,
-            item_desc:desc,
-            item_qty:qty,
-            item_price:price,
-        }
-        Items.push(items);
-        loadItemTable();
-    })
-    function loadItemTable(){
-        $('#item-details').empty();
-        Items.map((item,index) => {
-            var record=` <tr>
-             <td class="I-code">${item.item_code}</td>
-            <td class="I-name">${item.item_name}</td>
-            <td class="I-desc">${item.item_desc}</td>
-            <td class="I-qty">${item.item_qty}</td>
-            <td class="I-price">${item.item_price}</td>
-         </tr>`
-            $('#item-details').append(record);
-        });
-    }
-
-    $('#item-details').on('click','tr',function (){
-        let index = $(this).index();
-        recordIndex=index;
-        var code = $(this).find(".I-code").text();
-        var name = $(this).find(".I-name").text();
-        var desc = $(this).find(".I-desc").text();
-        var qty = $(this).find(".I-qty").text();
-        var price = $(this).find(".I-price").text();
-
-        console.log(code+ " "+name+" "+desc+" "+qty+" " +price);
-        $('#Item-code').val(code);
-        $('#Item-name').val(name);
-        $('#Item-desc').val(desc);
-        $('#Item-qty').val(qty);
-        $('#Item-unitprice').val(price);
-        loadItemTable();
-    });
-
-    $("#Item-Delete").on('click', () => {
-        Items.splice(recordIndex, 1);
-        loadItemTable();
-    });
-    $('#Item-update').on('click' , ()=> {
-
-        let val1 = $('#Item-code').val();
-        let val2 = $('#Item-name').val();
-        let val3 = $('#Item-desc').val();
-        let val4 = $('#Item-qty').val();
-        let val5 = $('#Item-unitprice').val();
-
-        let itemObj=Items[recordIndex];
-        itemObj.item_code=val1;
-        itemObj.item_name=val2;
-        itemObj.item_desc=val3;
-        itemObj.item_qty=val4;
-        itemObj.item_price=val5;
-        console.log("S1: ", itemObj);
-        console.log("S2: ", Items[recordIndex]);
-
-        loadItemTable();
-
-    });
-</script>
+</script >
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
