@@ -1,6 +1,7 @@
 import {Customer,Items} from "../DB/Db.js";
 
 import {customer} from "../model/Customer-Model.js";
+import {item} from "../model/item-model.js";
 
 var recordIndex;
 
@@ -209,14 +210,15 @@ $('#save-item').on('click',()=>{
 
     console.log(code+Iname+desc+qty+price);
 
-    let items={
-        item_code:code,
-        item_name:Iname,
-        item_desc:desc,
-        item_qty:qty,
-        item_price:price,
-    }
-    Items.push(items);
+    let item1 = new item(code,Iname,desc,qty,price);
+    // let items={
+    //     item_code:code,
+    //     item_name:Iname,
+    //     item_desc:desc,
+    //     item_qty:qty,
+    //     item_price:price,
+    // }
+    Items.push(item1);
     loadItemTable();
 })
 function loadItemTable(){
