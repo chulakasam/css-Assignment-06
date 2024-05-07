@@ -1,5 +1,7 @@
-var Customer=[];
-var Items=[];
+import {Customer,Items} from "../DB/Db.js";
+
+import {customer} from "../model/Customer-Model.js";
+
 var recordIndex;
 
 $('#s11,#d5,#h1').css({
@@ -125,14 +127,16 @@ $('#save-cus').on('click',()=>{
 
     console.log(id+name+address+tel+date);
 
-    let cus={
-        cus_id:id,
-        cus_name:name,
-        cus_address:address,
-        cus_tel:tel,
-        cus_date:date,
-    }
-    Customer.push(cus);
+    let customer1 = new customer(id,name,address,tel,date);
+    // let cus={
+    //     cus_id:id,
+    //     cus_name:name,
+    //     cus_address:address,
+    //     cus_tel:tel,
+    //     cus_date:date,
+    // }
+    Customer.push(customer1);
+    console.log(customer1)
     loadCustomerTable();
 
 })
