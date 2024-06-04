@@ -2,7 +2,10 @@ import { Customer, Items } from "../DB/Db.js";
 import { customer } from "../model/Customer-Model.js";
 import { item } from "../model/item-model.js";
 
+
 var recordIndex = -1;
+
+
 
 // Utility function to validate customer form inputs
 function validateCustomerForm(id, name, address, tel, date) {
@@ -51,29 +54,29 @@ $('#home-manage').on('click', () => {
     $('#s11,#d5,#h1').css({ display: 'block' });
     $('#s1,#s2,#s3,#cus-load-form').css({ display: 'none' });
     $('#s4,#s5,#s6,#Item-load-form').css({ display: 'none' });
-    $('#s7,#s8,#s9,#s10').css({ display: 'none' });
+    $('#s7,#s8,#s9,#s10,#place-order-section').css({ display: 'none' });
 });
 
 $('#s1,#s2,#s3,#cus-load-form').css({ display: 'none' });
 $('#s4,#s5,#s6,#Item-load-form').css({ display: 'none' });
-$('#s7,#s8,#s9,#s10').css({ display: 'none' });
+$('#s7,#s8,#s9,#s10,#place-order-section').css({ display: 'none' });
 
 $('#customer-manage').on('click', () => {
     $('#s1,#s2,#s3,#cus-load-form').css({ display: 'block' });
     $('#s4,#s5,#s6,#Item-load-form').css({ display: 'none' });
-    $('#s7,#s8,#s9,#s10').css({ display: 'none' });
+    $('#s7,#s8,#s9,#s10,#place-order-section').css({ display: 'none' });
     $('#s11,#d5,#h1').css({ display: 'none' });
 });
 
 $('#item-manage').on('click', () => {
     $('#s4,#s5,#s6,#Item-load-form').css({ display: 'block' });
     $('#s1,#s2,#s3,#cus-load-form').css({ display: 'none' });
-    $('#s7,#s8,#s9,#s10').css({ display: 'none' });
+    $('#s7,#s8,#s9,#s10,#place-order-section').css({ display: 'none' });
     $('#s11,#d5,#h1').css({ display: 'none' });
 });
 
 $('#placeOrder-manage').on('click', () => {
-    $('#s7,#s8,#s9,#s10').css({ display: 'block' });
+    $('#s7,#s8,#s9,#s10,#place-order-section').css({ display: 'block' });
     $('#s1,#s2,#s3,#cus-load-form').css({ display: 'none' });
     $('#s4,#s5,#s6,#Item-load-form').css({ display: 'none' });
     $('#s11,#d5,#h1').css({ display: 'none' });
